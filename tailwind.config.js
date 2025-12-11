@@ -9,9 +9,9 @@ module.exports = {
       colors: {
         sage: "#A3B18A",
         "light-sage": "#B7C29D",
-        olive: "#5A6E3A",
+        olive: "#47622A",
         forest: "#344E41",
-        cream: "#E7E4D9",
+        cream: "#EEE9BF",
         accent: "#CDB4DB",
         leaf: "#9FB878",
       },
