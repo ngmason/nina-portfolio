@@ -8,10 +8,21 @@ module.exports = {
     extend: {
       colors: {
         sage: "#A3B18A",
-        lavender: "#CDB4DB",
-        cream: "#FAF9F6",
+        "light-sage": "#B7C29D",
+        olive: "#5A6E3A",
         forest: "#344E41",
-        navy: "#1D3557",
+        cream: "#E7E4D9",
+        accent: "#CDB4DB",
+        leaf: "#9FB878",
+      },
+      borderRadius: {
+        xl: "1.25rem",
+        "2xl": "1.75rem"
+      },
+
+      fontFamily: {
+        heading: ["var(--font-playfair)"],
+        body: ["var(--font-inter)"],
       },
     },
   },
