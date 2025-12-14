@@ -1,11 +1,15 @@
 import Image from "next/image";
+import EmailButton from "./components/EmailButton";
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center">
       
-      {/* Hero Section */}
-      <section className="w-full bg-light-sage">
+      {/* Home Section */}
+      <section
+        id="home"
+        className="w-full bg-light-sage"
+      >
         <div className="max-w-5xl mx-auto min-h-[80vh] flex flex-col justify-center px-6">
           
           <div className="max-w-2xl space-y-6">
@@ -55,7 +59,7 @@ export default function Home() {
       {/* Projects Section */}
       <section
         id="projects"
-        className="w-full min-h-screen bg-leaf flex items-center justify-center"
+        className="w-full min-h-screen bg-sage flex items-center justify-center"
       >
         <h2 className="font-heading text-4xl text-forest">
           Projects Section (Coming Soon ✨)
@@ -78,22 +82,12 @@ export default function Home() {
           </p>
 
           <div className="space-y-4 pt-4">
-            <a
-              href="mailto:nina12mason@gmail.com?subject=Let's%20Connect&body=Hi%20Nina,%0D%0A%0D%0AI%20found%20your%20portfolio%20and%20wanted%20to%20reach%20out!"
-              className="w-full block text-center rounded-xl bg-forest py-3 text-cream font-medium hover:bg-forest/90 transition"
-            >
-              Email Me
-            </a>
-
-            <p className="text-sm text-forest/70 text-center">
-              Or copy: <span className="font-mono">nina12mason@gmail.com</span>
-            </p>
 
             <a
               href="https://github.com/ngmason"
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full rounded-xl border border-forest text-forest py-3 hover:bg-forest/10 transition"
+              className="block w-full rounded-xl bg-forest py-3 text-center text-cream font-medium hover:bg-forest/90 transition"
             >
               GitHub
             </a>
@@ -102,10 +96,12 @@ export default function Home() {
               href="https://www.linkedin.com/in/nina-mason-25b5b332b/"
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full rounded-xl border border-forest text-forest py-3 hover:bg-forest/10 transition"
+              className="block w-full rounded-xl bg-forest py-3 text-center text-cream font-medium hover:bg-forest/90 transition"
             >
               LinkedIn
             </a>
+
+            <EmailButton/>
           </div>
         </div>
       </section>

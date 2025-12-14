@@ -1,19 +1,19 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useActiveSection } from "@/app/hooks/useActiveSection";
 
 export default function Navbar() {
-  const pathname = usePathname();
-  const isHome = pathname === "/";
+  const activeSection = useActiveSection();
+  //const isHome = pathname === "/";
   return (
     <nav className="sticky top-0 z-50 w-full bg-olive text-cream py-4 shadow-md">
       <div className="max-w-5xl mx-auto flex justify-center gap-12 text-lg font-body">
         
         <Link 
-          href="/#home" 
+          href="#home" 
           className={`group flex items-center gap-2 transition
-            ${pathname === "/" ? "text-accent" : "hover:text-accent"}
+            ${activeSection === "home" ? "text-accent" : "hover:text-accent"}
           `}
         >
           <svg
@@ -26,9 +26,9 @@ export default function Navbar() {
         </Link>
 
         <Link 
-          href="/#about" 
+          href="#about" 
           className={`group flex items-center gap-2 transition
-            ${pathname === "/about" ? "text-accent" : "hover:text-accent"}
+            ${activeSection === "about" ? "text-accent" : "hover:text-accent"}
           `}
         >
           <svg
@@ -41,9 +41,9 @@ export default function Navbar() {
         </Link>
 
         <Link 
-          href="/#projects" 
+          href="#projects" 
           className={`group flex items-center gap-2 transition
-            ${pathname === "/projects" ? "text-accent" : "hover:text-accent"}
+            ${activeSection === "projects" ? "text-accent" : "hover:text-accent"}
           `}
         >
           <svg 
@@ -56,9 +56,9 @@ export default function Navbar() {
         </Link>
 
         <Link 
-          href="/#contact" 
+          href="#contact" 
           className={`group flex items-center gap-2 transition
-            ${pathname === "/links" ? "text-accent" : "hover:text-accent"}
+            ${activeSection === "contact" ? "text-accent" : "hover:text-accent"}
           `}
         >
           <svg 
