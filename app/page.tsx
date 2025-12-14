@@ -10,37 +10,46 @@ export default function Home() {
         id="home"
         className="w-full bg-light-sage"
       >
-        <div className="max-w-5xl mx-auto min-h-[80vh] flex flex-col justify-center px-6">
-          
-          <div className="max-w-2xl space-y-6">
-            <h1 className="font-heading text-5xl md:text-6xl text-forest leading-tight">
-              Hi, I'm Nina
-            </h1>
+        <div className="max-w-5xl mx-auto min-h-[80vh] px-6 flex items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
+            <div className="space-y-6 text-center md:text-left">
+              <h1 className="font-heading text-5xl md:text-5xl text-forest leading-tight">
+                Hi, I'm Nina Mason
+              </h1>
 
-            <p className="font-body text-lg md:text-xl text-forest/80">
-              A software engineer passionate about building thoughtful,
-              human-centered web experiences.
-            </p>
+              <p className="font-body text-lg md:text-xl text-forest/80 max-w-xl mx-auto md:mx-0">
+                A software engineer who builds intuitive, full-stack applications with care for both users and code.
+              </p>
 
-          <div className="flex gap-4 pt-6">
+              <div className="flex gap-4 pt-6 justify-center md:justify-start">
+                <a
+                  href="/resume/Nina_Mason_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 rounded-xl bg-forest text-cream font-medium hover:bg-forest/90 transition"
+                >
+                  Resume
+                </a>
 
-            <a
-              href="/resume/Nina_Mason_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 rounded-xl bg-forest text-cream font-medium hover:bg-forest/90 transition"
-            >
-              Resume
-            </a>
+                <a
+                  href="/#contact"
+                  className="px-6 py-3 rounded-xl border border-forest text-forest font-medium hover:bg-forest/10 transition"
+                >
+                  Contact Me
+                </a>
+              </div>
+            </div>
+            <div className="rounded-full border-4 border-cream shadow-xl ring-4 ring-forest/40 hover:scale-105 transition">
+              <Image
+                src="/images/profile.jpg"
+                alt="Photo of Nina Mason"
+                width={280}
+                height={280}
+                className="rounded-full border-4 border-cream shadow-lg hover:scale-105 transition"
+                priority
+              />
+            </div>
 
-            <a
-              href="/#contact"
-              className="px-6 py-3 rounded-xl border border-forest text-forest font-medium hover:bg-forest/10 transition"
-            >
-              Contact Me
-            </a>
-
-          </div>
           </div>
 
         </div>
