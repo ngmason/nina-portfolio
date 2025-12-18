@@ -1,5 +1,6 @@
 import Image from "next/image";
 import EmailButton from "./components/EmailButton";
+import ImageCarousel from "./components/ImageCarousel";
 
 export default function Home() {
   return (
@@ -109,9 +110,77 @@ export default function Home() {
         id="projects"
         className="w-full min-h-screen bg-sage flex items-center justify-center scroll-mt-40"
       >
-        <h2 className="font-heading text-4xl text-forest">
-          Projects Section (Coming Soon ✨)
-        </h2>
+        <div className="max-w-5xl mx-auto space-y-16">
+
+          <h2 className="font-heading text-4xl text-forest text-center">
+            Projects
+          </h2>
+
+          {/* Featured Project: Capstone */}
+          <div className="bg-cream rounded-3xl shadow-lg p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            {/* Image */}
+            <div className="rounded-2xl bg-forest/10 h-64 flex items-center justify-center">
+              <ImageCarousel
+                images={[
+                  "/images/capstone/homepage.png",
+                  "/images/capstone/landing-page.png",
+                  "/images/capstone/foundations-for-algebra.png",
+                  "/images/capstone/assessment-page.png",
+                  "/images/capstone/foundations-for-algebra.png",
+                  "/images/capstone/feedback.png",
+                  "/images/capstone/confidence-rating.png",
+                  "/images/capstone/hints.png",
+                  "/images/capstone/shifting-focus.png",
+                  "/images/capstone/learning-summary-1.png",
+                  "/images/capstone/learning-summary-2.png",
+                  "/images/capstone/textbook-sections.png",
+                ]}
+              />
+            </div>
+
+            {/* Text */}
+            <div className="space-y-4">
+              <h3 className="font-heading text-2xl text-forest">
+                Self-Learning AI Tutor
+              </h3>
+
+              <p className="font-body text-forest/80">
+                Adaptive AI-powered tutoring platform focused on evaluating
+                step-by-step reasoning and providing personalized feedback.
+              </p>
+
+              <p className="text-sm text-forest/70">
+                <strong>My role:</strong> Designed adaptivity logic, cleaned and
+                migrated MongoDB data, implemented prompt configuration,
+                and improved feedback quality for partial correctness.
+              </p>
+
+              <div className="flex flex-wrap gap-2 text-sm">
+                <span className="px-3 py-1 rounded-full bg-forest/10 text-forest">Python</span>
+                <span className="px-3 py-1 rounded-full bg-forest/10 text-forest">Streamlit</span>
+                <span className="px-3 py-1 rounded-full bg-forest/10 text-forest">MongoDB</span>
+                <span className="px-3 py-1 rounded-full bg-forest/10 text-forest">OpenAI API</span>
+              </div>
+
+              <div className="flex gap-4 pt-4">
+                <a
+                  href="/case-studies/ai-tutor.pdf"
+                  target="_blank"
+                  className="px-5 py-2 rounded-xl bg-forest text-cream font-medium hover:bg-forest/90 transition"
+                >
+                  Case Study
+                </a>
+
+                <span className="px-5 py-2 rounded-xl border border-forest text-forest font-medium">
+                  🔒 Private Repo
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Other projects will go here */}
+
+        </div>
       </section>
 
       {/* Contact / Links Section */}
