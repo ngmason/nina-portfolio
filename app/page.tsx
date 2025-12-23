@@ -108,7 +108,7 @@ export default function Home() {
       {/* Projects Section */}
       <section
         id="projects"
-        className="w-full min-h-screen bg-sage flex items-center justify-center scroll-mt-40"
+        className="w-full bg-sage py-24"
       >
         <div className="max-w-5xl mx-auto space-y-16">
 
@@ -174,6 +174,61 @@ export default function Home() {
                 <span className="px-5 py-2 rounded-xl border border-forest text-forest font-medium">
                   🔒 Private Repo
                 </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Project: JavaFX GPS Distance App */}
+          <div className="bg-cream rounded-3xl shadow-lg p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            
+            {/* Image / Carousel */}
+            <div className="rounded-2xl bg-forest/10 h-64 flex items-center justify-center">
+              <ImageCarousel
+                images={[
+                  "/images/gps/enter-new-route-tab.png",
+                  "/images/gps/map-preview-and-route-summary.png",
+                  "/images/gps/select-previous-route-tab.png",
+                  "/images/gps/select-previous-route-tab-2.png",
+                  "/images/gps/cli-version.png"
+                ]}
+              />
+            </div>
+
+            {/* Text */}
+            <div className="space-y-4">
+              <h3 className="font-heading text-2xl text-forest">
+                JavaFX GPS Distance Application
+              </h3>
+
+              <p className="font-body text-forest/80">
+                Desktop GPS application that calculates distances between locations
+                using the Haversine formula, with both CLI and JavaFX GUI modes. GUI 
+                integrates Mapbox API into live mapping feature.
+              </p>
+
+              <p className="text-sm text-forest/70">
+                <strong>Highlights:</strong> Designed the JavaFX UI, implemented
+                distance calculations, persisted route data using JSON, and
+                automated builds with Gradle.
+              </p>
+
+              <div className="flex flex-wrap gap-2 text-sm">
+                <span className="px-3 py-1 rounded-full bg-forest/10 text-forest">Java</span>
+                <span className="px-3 py-1 rounded-full bg-forest/10 text-forest">JavaFX</span>
+                <span className="px-3 py-1 rounded-full bg-forest/10 text-forest">Gradle</span>
+                <span className="px-3 py-1 rounded-full bg-forest/10 text-forest">JSON</span>
+                <span className="px-3 py-1 rounded-full bg-forest/10 text-forest">API</span>
+              </div>
+
+              <div className="flex gap-4 pt-4">
+                <a
+                  href="https://github.com/ngmason/gps-distance-app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-2 rounded-xl bg-forest text-cream font-medium hover:bg-forest/90 transition"
+                >
+                  View on GitHub
+                </a>
               </div>
             </div>
           </div>
