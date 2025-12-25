@@ -4,7 +4,7 @@ import ImageCarousel from "./components/ImageCarousel";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center">
+    <main className="flex flex-col">
       
       {/* Home Section */}
       <section
@@ -107,10 +107,10 @@ export default function Home() {
 
       {/* Projects Section */}
       <section
-        id="projects"
-        className="w-full bg-sage py-24"
+          id="projects"
+          className="relative w-full bg-sage py-32 scroll-mt-40"
       >
-        <div className="max-w-5xl mx-auto space-y-16">
+        <div className="max-w-5xl mx-auto space-y-24">
 
           <h2 className="font-heading text-4xl text-forest text-center">
             Projects
@@ -232,9 +232,62 @@ export default function Home() {
               </div>
             </div>
           </div>
+          {/* C Image Processor Project */}
+          <div className="bg-cream rounded-3xl shadow-lg p-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            
+            {/* Image Carousel */}
+            <ImageCarousel
+              images={[
+                "/images/c-image-processor/original.png",
+                "/images/c-image-processor/black-and-white-filter.png",
+                "/images/c-image-processor/color-shift-filter.png",
+                "/images/c-image-processor/swiss-cheese-filter.png",
+                "/images/c-image-processor/blur-filter.png",
+              ]}
+            />
+
+            {/* Project Content */}
+            <div className="space-y-6">
+              <h3 className="font-heading text-3xl text-forest">
+                Multithreaded C Image Processor
+              </h3>
+
+              <p className="font-body text-forest/80">
+                A command-line image processing tool written in C that applies
+                multiple filters to BMP images using multithreading for performance.
+              </p>
+
+              <p className="text-sm text-forest/70">
+                <strong>Highlights:</strong> Implemented custom filters 
+                (blur, grayscale, color shift, and swiss-cheese effect), handled low-level 
+                BMP parsing, and parallelized image processing using
+                POSIX threads.
+              </p>
+
+              {/* Tech Stack */}
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 rounded-full bg-sage/40 text-forest text-sm">C</span>
+                <span className="px-3 py-1 rounded-full bg-sage/40 text-forest text-sm">POSIX Threads</span>
+                <span className="px-3 py-1 rounded-full bg-sage/40 text-forest text-sm">BMP Parsing</span>
+                <span className="px-3 py-1 rounded-full bg-sage/40 text-forest text-sm">Memory Management</span>
+                <span className="px-3 py-1 rounded-full bg-sage/40 text-forest text-sm">Linux / WSL</span>
+              </div>
+
+              {/* Action Button */}
+              <div className="pt-4">
+                <a
+                  href="https://github.com/ngmason/c-image-processor"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-6 py-3 rounded-xl bg-forest text-cream font-medium hover:bg-forest/90 transition"
+                >
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+          </div>
 
           {/* Other projects will go here */}
-
         </div>
       </section>
 

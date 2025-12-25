@@ -2,42 +2,47 @@
 
 import { useEffect, useState } from "react";
 
-const SECTION_IDS = ["home", "about", "projects", "contact"];
+const sections = ["home", "about", "projects", "contact"] as const;
 
-export function useActiveSection() {
-  const [activeSection, setActiveSection] = useState("home");
+export default function useActiveSection() {
+  const [activeSection, setActiveSection] =
+    useState<(typeof sections)[number]>("home");
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            if (window.scrollY < 120) return;
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      {
-        threshold: 0.6,
-      }
-    );
+    const getHeaderOffset = () => {
+      const stickyWrapper = document.querySelector("body > div.sticky");
+      return stickyWrapper instanceof HTMLElement ? stickyWrapper.offsetHeight : 0;
+    };
 
-    SECTION_IDS.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
+    const findActiveSection = () => {
+      const headerOffset = getHeaderOffset();
+      const probeY = headerOffset + 8;
 
-    const handleScroll = () => {
-      if (window.scrollY < 120) {
-        setActiveSection("home");
+      for (const id of sections) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+
+        const rect = el.getBoundingClientRect();
+
+        if (rect.top <= probeY && rect.bottom > probeY) {
+          setActiveSection(id);
+          return;
+        }
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    // Run once on mount (and after layout)
+    requestAnimationFrame(findActiveSection);
+
+    const onScroll = () => findActiveSection();
+    const onResize = () => findActiveSection();
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onResize);
 
     return () => {
-      observer.disconnect();
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onResize);
     };
   }, []);
 

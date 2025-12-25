@@ -1,13 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { useActiveSection } from "@/app/hooks/useActiveSection";
+import useActiveSection from "@/app/hooks/useActiveSection";
 
 export default function Navbar() {
   const activeSection = useActiveSection();
   //const isHome = pathname === "/";
   return (
-    <nav className="sticky top-0 z-50 w-full bg-olive text-cream py-4 shadow-md">
+    <nav className="w-full bg-olive text-cream py-4 shadow-md">
       <div className="max-w-5xl mx-auto flex justify-center gap-12 text-lg font-body">
         
         <Link 
