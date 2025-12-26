@@ -8,7 +8,7 @@ export default function Navbar() {
   //const isHome = pathname === "/";
   return (
     <nav className="w-full bg-olive text-cream py-4 shadow-md">
-      <div className="max-w-5xl mx-auto flex justify-center gap-12 text-lg font-body">
+      <div className="max-w-5xl mx-auto flex justify-center gap-6 md:gap-12 text-sm md:text-lg font-body">
         
         <Link 
           href="#home" 

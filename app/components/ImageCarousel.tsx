@@ -37,7 +37,7 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
         {/* Left arrow */}
         <button
           onClick={prev}
-          className="absolute left-3 top-1/2 -translate-y-1/2 bg-cream/80 text-forest rounded-full p-2 shadow hover:bg-cream transition z-20"
+          className="absolute left-3 top-1/2 -translate-y-1/2 bg-cream/80 text-forest rounded-full p-3 md:p-2 shadow hover:bg-cream transition z-20"
         >
           ‹
         </button>
@@ -45,7 +45,7 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
         {/* Right arrow */}
         <button
           onClick={next}
-          className="absolute right-3 top-1/2 -translate-y-1/2 bg-cream/80 text-forest rounded-full p-2 shadow hover:bg-cream transition z-20"
+          className="absolute right-3 top-1/2 -translate-y-1/2 bg-cream/80 text-forest rounded-full p-3 md:p-2 shadow hover:bg-cream transition z-20"
         >
           ›
         </button>

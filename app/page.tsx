@@ -117,7 +117,7 @@ export default function Home() {
           </h2>
 
           {/* Featured Project: Capstone */}
-          <div className="bg-cream rounded-3xl shadow-lg p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="bg-cream rounded-3xl shadow-lg p-6 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Image */}
             <div className="rounded-2xl bg-forest/10 h-64 flex items-center justify-center">
               <ImageCarousel
@@ -179,7 +179,7 @@ export default function Home() {
           </div>
 
           {/* Project: JavaFX GPS Distance App */}
-          <div className="bg-cream rounded-3xl shadow-lg p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="bg-cream rounded-3xl shadow-lg p-6 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             
             {/* Image / Carousel */}
             <div className="rounded-2xl bg-forest/10 h-64 flex items-center justify-center">
@@ -233,7 +233,7 @@ export default function Home() {
             </div>
           </div>
           {/* C Image Processor Project */}
-          <div className="bg-cream rounded-3xl shadow-lg p-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="bg-cream rounded-3xl shadow-lg p-6 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             
             {/* Image Carousel */}
             <ImageCarousel
