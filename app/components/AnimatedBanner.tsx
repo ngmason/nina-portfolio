@@ -13,9 +13,9 @@ export default function AnimatedBanner() {
         />
       ) : (
         <img
-          src="/images/mountain-banner.jpg"
-          alt="Mountain landscape"
-          className="w-full h-full object-cover object-[center_37%]"
+          src="/images/cozy-banner.png"
+          alt="Cozy office image"
+          className="w-full h-full object-cover object-center"
         />
       )}
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-transparent" />
