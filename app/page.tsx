@@ -19,7 +19,7 @@ export default function Home() {
               </h1>
 
               <p className="font-body text-lg md:text-xl text-forest/80 max-w-xl mx-auto md:mx-0">
-                A software engineer who builds intuitive, full-stack applications with care for both users and code.
+                Software engineer building thoughtful, user-focused applications across full-stack development, AI-powered systems, and interactive software.
               </p>
 
               <div className="flex gap-4 pt-6 justify-center md:justify-start">
@@ -87,17 +87,19 @@ export default function Home() {
                 human-centered applications — the kind that feel intuitive,
                 accessible, and genuinely enjoyable to use.
                 <br /><br />
-                My experience spans full-stack development, UI design,
-                and collaborative team projects. I care deeply about
-                writing clean, maintainable code while also crafting
-                interfaces that feel warm and intentional.
+                My experience spans full-stack development, AI-powered applications, 
+                interactive UI design, automated testing, and collaborative Agile  
+                team development. I enjoy solving both technical and human-centered problems—whether 
+                that means building adaptive learning systems, integrating APIs, designing intuitive  
+                interfaces, or improving software reliability through clean architecture and testing. 
                 <br /><br />
                 Outside of tech, I enjoy crocheting, caring for my plants,
                 hiking, and spending time with my family and my chihuahua, 
                 Igby.
                 <br /><br />
-                <i>Technologies I work with:</i> Java, Python, JavaScript, 
-                React, Next.js, JavaFX, MongoDB, REST APIs, Git.
+                <i>Technologies I work with:</i> Java, Python, JavaScript, React, 
+                Next.js, JavaFX, Streamlit, MongoDB, REST APIs, Docker, Git, SQL, 
+                Node.js, C, C++
               </p>
             </div>
           </div>
@@ -122,18 +124,20 @@ export default function Home() {
             <div className="rounded-2xl bg-forest/10 h-64 flex items-center justify-center">
               <ImageCarousel
                 images={[
-                  "/images/capstone/homepage.png",
-                  "/images/capstone/landing-page.png",
-                  "/images/capstone/foundations-for-algebra.png",
-                  "/images/capstone/assessment-page.png",
-                  "/images/capstone/foundations-for-algebra.png",
-                  "/images/capstone/feedback.png",
-                  "/images/capstone/confidence-rating.png",
-                  "/images/capstone/hints.png",
-                  "/images/capstone/shifting-focus.png",
-                  "/images/capstone/learning-summary-1.png",
-                  "/images/capstone/learning-summary-2.png",
-                  "/images/capstone/textbook-sections.png",
+                  "/images/capstone/login-page.png",
+                  "/images/capstone/learning-dashboard.png",
+                  "/images/capstone/learning-dashboard-2.png",
+                  "/images/capstone/learning-dashboard-3.png",
+                  "/images/capstone/assess-my-understanding.png",
+                  "/images/capstone/checks.png",
+                  "/images/capstone/question-correct.png",
+                  "/images/capstone/question-correct-feedback.png",
+                  "/images/capstone/question-incorrect.png",
+                  "/images/capstone/question-incorrect-feedback.png",
+                  "/images/capstone/learning-assessment-summary.png",
+                  "/images/capstone/learning-assessment-summary-2.png",
+                  "/images/capstone/strengthen-my-understanding.png",
+                  "/images/capstone/strengthen-my-understanding-2.png",
                 ]}
               />
             </div>
@@ -145,14 +149,15 @@ export default function Home() {
               </h3>
 
               <p className="font-body text-forest/80">
-                Adaptive AI-powered tutoring platform focused on evaluating
-                step-by-step reasoning and providing personalized feedback.
+                Sponsored capstone project focused on building an adaptive AI-powered 
+                tutoring platform that evaluates student reasoning, personalizes learning pathways, 
+                and delivers structured feedback in real time.
               </p>
 
               <p className="text-sm text-forest/70">
-                <strong>My role:</strong> Designed adaptivity logic, cleaned and
-                migrated MongoDB data, implemented prompt configuration,
-                and improved feedback quality for partial correctness.
+                <strong>My role:</strong> Built adaptive assessment logic, enhanced reasoning analysis workflows,
+                improved feedback quality, maintained MongoDB-backed data systems,
+                and contributed automated testing within a remote Agile Scrum team.
               </p>
 
               <div className="flex flex-wrap gap-2 text-sm">
@@ -164,14 +169,22 @@ export default function Home() {
 
               <div className="flex gap-4 pt-4">
                 <a
-                  href="/case-studies/ai-tutor.pdf"
+                  href="/case-studies/Software-Quality-Report.pdf"
                   target="_blank"
-                  className="px-5 py-2 rounded-xl bg-forest text-cream font-medium hover:bg-forest/90 transition"
+                  className="px-5 py-2 text-sm rounded-xl bg-forest text-cream font-medium hover:bg-forest/90 transition"
                 >
-                  Case Study
+                  Software Quality Report
                 </a>
 
-                <span className="px-5 py-2 rounded-xl border border-forest text-forest font-medium">
+                <a
+                  href="/case-studies/Software-Quality-Plan.pdf"
+                  target="_blank"
+                  className="px-5 py-2 text-sm rounded-xl bg-forest text-cream font-medium hover:bg-forest/90 transition"
+                >
+                  Software Quality Plan
+                </a>
+
+                <span className="px-5 py-2 text-sm rounded-xl border border-forest text-forest font-medium">
                   🔒 Private Repo
                 </span>
               </div>
@@ -202,12 +215,12 @@ export default function Home() {
 
               <p className="font-body text-forest/80">
                 Desktop GPS application that calculates distances between locations
-                using the Haversine formula, with both CLI and JavaFX GUI modes. GUI 
-                integrates Mapbox API into live mapping feature.
+                using the Haversine formula, with both CLI and JavaFX GUI modes. Integrated 
+                the Mapbox API to embed dynamic live mapping into the JavaFX interface.
               </p>
 
               <p className="text-sm text-forest/70">
-                <strong>Highlights:</strong> Designed the JavaFX UI, implemented
+                <strong>Highlights:</strong> Designed and implemented the JavaFX user interface, implemented
                 distance calculations, persisted route data using JSON, and
                 automated builds with Gradle.
               </p>
@@ -238,7 +251,6 @@ export default function Home() {
             {/* Image Carousel */}
             <ImageCarousel
               images={[
-                "/images/c-image-processor/original.png",
                 "/images/c-image-processor/black-and-white-filter.png",
                 "/images/c-image-processor/color-shift-filter.png",
                 "/images/c-image-processor/swiss-cheese-filter.png",
@@ -302,8 +314,8 @@ export default function Home() {
           </h2>
 
           <p className="font-body text-forest/80">
-            I'd love to chat - whether it's about opportunities,
-            projects, or just saying hi 🌿
+            I’d love to connect about software engineering opportunities,
+            projects, or creative tech ideas 🌿
           </p>
 
           <div className="space-y-4 pt-4">
