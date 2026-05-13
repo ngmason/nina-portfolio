@@ -19,7 +19,7 @@ export default function Home() {
               </h1>
 
               <p className="font-body text-lg md:text-xl text-forest/80 max-w-xl mx-auto md:mx-0">
-                Software engineer building thoughtful, user-focused applications across full-stack development, AI-powered systems, and interactive software.
+                A software engineer building thoughtful, user-focused applications across full-stack development, AI-powered systems, and interactive software.
               </p>
 
               <div className="flex gap-4 pt-6 justify-center md:justify-start">
