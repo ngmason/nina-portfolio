@@ -107,6 +107,118 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Education Section */}
+      <section
+        id="education"
+        className="w-full bg-light-sage py-24 px-6 scroll-mt-40"
+      >
+        <div className="max-w-5xl mx-auto space-y-12">
+
+          <h2 className="font-heading text-4xl text-forest text-center">
+            Education & Background
+          </h2>
+
+          <div className="bg-cream rounded-3xl shadow-lg p-8 md:p-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+              {/* Degree Info */}
+              <div className="space-y-5">
+
+                <h3 className="font-heading text-2xl text-forest leading-snug">
+                  Bachelor of Science in Engineering
+                  <br />
+                  Software Engineering
+                </h3>
+
+                <div className="space-y-2 font-body text-forest/80">
+                  <p>🎓 Arizona State University</p>
+                  <p>🏅 Summa Cum Laude</p>
+                  <p>📊 GPA: 3.89 / 4.0</p>
+                  <p>📅 Graduated: May 2026</p>
+                </div>
+
+                <a
+                  href="/education/eDiploma.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-4 px-6 py-3 rounded-xl bg-forest text-cream font-medium hover:bg-forest/90 transition"
+                >
+                  View eDiploma
+                </a>
+              </div>
+
+              {/* Highlights + Coursework */}
+              <div className="space-y-10">
+                <div>
+                  <h4 className="font-heading text-2xl text-forest mb-4">
+                    Highlights
+                  </h4>
+
+                  <div className="flex flex-col gap-3">
+                    {[
+                      "Sponsored AI Capstone Project",
+                      "Full-stack & AI development",
+                      "Agile Scrum collaboration",
+                      "Automated testing & QA",
+                      "Active personal software projects",
+                    ].map((highlight) => (
+                      <span
+                        key={highlight}
+                        className="
+                          group
+                          px-4 py-2
+                          rounded-full
+                          bg-light-sage
+                          text-forest/80
+                          shadow-sm
+                          transition-all
+                          duration-200
+                          hover:bg-forest
+                          hover:text-cream
+                          hover:shadow-md
+                          hover:-translate-y-0.5
+                        "
+                      >
+                        <span className="transition-colors duration-200 group-hover:text-cream">
+                          ✓
+                        </span>{" "}
+                        {highlight}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="font-heading text-2xl text-forest mb-4">
+                    Relevant Coursework
+                  </h4>
+
+                  <div className="flex flex-wrap gap-3">
+                    {[
+                      "Data Structures & Algorithms",
+                      "Operating Systems",
+                      "Secure Software Systems",
+                      "Web-Based Applications",
+                      "Mobile Application Development",
+                      "Project Management",
+                    ].map((course) => (
+                      <span
+                        key={course}
+                        className="px-4 py-2 rounded-full bg-forest/10 text-forest/80 font-body text-sm shadow-sm"
+                      >
+                        {course}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       {/* Projects Section */}
       <section
           id="projects"
